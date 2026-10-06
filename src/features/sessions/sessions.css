@@ -1,0 +1,125 @@
+.sessions-workspace {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  text-align: left;
+  color: var(--text);
+}
+
+.sessions-workspace h1 {
+  margin: 0 0 24px;
+  color: var(--text-h);
+  font-size: 32px;
+}
+
+.sessions-workspace button,
+.sessions-workspace input,
+.sessions-workspace select {
+  font: inherit;
+  color: var(--text-h);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.sessions-workspace button {
+  cursor: pointer;
+}
+
+.sessions-workspace button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.sessions-workspace :is(button, input, select):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.sessions-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sessions-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.session-form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.session-form-field {
+  display: grid;
+  gap: 4px;
+}
+
+.session-form-error {
+  margin: 0;
+  color: #c62828;
+  font-size: 0.9em;
+}
+
+.session-form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.sessions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sessions-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sessions-item-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-h);
+}
+
+.sessions-status {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  background: var(--accent-bg);
+}
+
+.sessions-item time {
+  font-variant-numeric: tabular-nums;
+}
+
+.sessions-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .sessions-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
